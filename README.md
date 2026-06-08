@@ -77,7 +77,8 @@ MAX_OUTPUT_TOKENS=1200
 Manual starter service:
 
 - USD 19 for one public URL or public GitHub repository audit.
-- Payment accepted through PayPal invoice/link or crypto invoice.
+- Crypto invoice preferred: USDT, USDC, BTC, ETH, or another supported asset.
+- PayPal invoice/link is available as a backup when needed.
 - Buyer sends only the public URL and optional public notes after payment.
 
 Suggested Apify pay-per-event:

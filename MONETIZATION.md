@@ -15,7 +15,8 @@ USD 19-49 depending on scope
 
 Starter order terms:
 
-- Payment through PayPal invoice/link or crypto invoice.
+- Crypto invoice preferred: USDT, USDC, BTC, ETH, or another supported asset.
+- PayPal invoice/link is available as a backup when needed.
 - Buyer provides one public URL or one public GitHub repository.
 - Delivery is a Markdown or PDF report within 24-48 hours after the public URL is received.
 - No logins, private data, secrets, credentials, customer data, or regulated data.
