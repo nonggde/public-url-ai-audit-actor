@@ -4,7 +4,7 @@
   "title": "Public URL AI Audit Report",
   "description": "Generate a concise AI-assisted report for a public landing page, GitHub repo, AI SEO/GEO profile, or competitor messaging snapshot.",
   "readme": "../README.md",
-  "categories": ["AI", "SEO tools", "Marketing"],
+  "categories": ["AI", "SEO_TOOLS", "MARKETING"],
   "version": "0.1",
   "buildTag": "latest",
   "meta": {
