@@ -5,7 +5,7 @@ Current local status:
 - Actor code exists and passes syntax checks.
 - Local dry-run works through `npm run local-demo`.
 - Git repo initialized.
-- Latest useful commit: `bed3469 Add public URL AI audit actor`.
+- Apify private Actor build and dry-run have succeeded.
 
 ## What This Product Does
 
@@ -47,7 +47,7 @@ MAX_OUTPUT_TOKENS=1200
 ## Local Verification
 
 ```powershell
-cd 'C:\Users\Administrator\Desktop\新建文件夹\public-url-ai-audit-actor'
+cd path\to\public-url-ai-audit-actor
 npm run check
 npm run local-demo
 ```
@@ -59,18 +59,12 @@ dist/local-demo/REPORT.md
 dist/local-demo/REPORT.json
 ```
 
-## GitHub Blocker
+## GitHub Publishing
 
-GitHub CLI auth was invalid for account `nonggde` during the previous publish attempt. If we want this actor in a public GitHub repo, refresh GitHub auth first:
-
-```powershell
-& 'C:\Program Files\GitHub CLI\gh.exe' auth refresh -h github.com
-```
-
-Then create/push:
+Create or update a public portfolio repository only after the public-facing docs are English-only and contain no secrets:
 
 ```powershell
-cd 'C:\Users\Administrator\Desktop\新建文件夹\public-url-ai-audit-actor'
+cd path\to\public-url-ai-audit-actor
 & 'C:\Program Files\GitHub CLI\gh.exe' repo create public-url-ai-audit-actor --public --source . --remote origin --push
 ```
 

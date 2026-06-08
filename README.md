@@ -2,6 +2,8 @@
 
 An Apify Actor that turns one public URL or public GitHub repository into a concise AI-assisted report.
 
+Built by `city in the sky`.
+
 This is built for small paid reports, not raw API resale. The Actor can generate:
 
 - landing page copy fixes
@@ -71,6 +73,12 @@ MAX_OUTPUT_TOKENS=1200
 - Report text must not invent metrics, customers, pricing, funding, or technical claims.
 
 ## Monetization Plan
+
+Manual starter service:
+
+- USD 19 for one public URL or public GitHub repository audit.
+- Payment accepted through PayPal invoice/link or crypto invoice.
+- Buyer sends only the public URL and optional public notes after payment.
 
 Suggested Apify pay-per-event:
 

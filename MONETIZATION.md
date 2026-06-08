@@ -1,5 +1,7 @@
 # Monetization Notes
 
+Maker: `city in the sky`
+
 ## First Version
 
 Use the Actor as a portfolio asset and manual service engine first.
@@ -10,6 +12,13 @@ Offer:
 Public URL AI Audit Report
 USD 19-49 depending on scope
 ```
+
+Starter order terms:
+
+- Payment through PayPal invoice/link or crypto invoice.
+- Buyer provides one public URL or one public GitHub repository.
+- Delivery is a Markdown or PDF report within 24-48 hours after the public URL is received.
+- No logins, private data, secrets, credentials, customer data, or regulated data.
 
 ## Apify Store Version
 
