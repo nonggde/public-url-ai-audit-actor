@@ -1,0 +1,64 @@
+{
+  "title": "Public URL AI Audit Report",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "targetUrl": {
+      "title": "Target URL",
+      "type": "string",
+      "description": "A public website URL or public GitHub repository URL.",
+      "editor": "textfield",
+      "prefill": "https://example.com"
+    },
+    "auditType": {
+      "title": "Audit type",
+      "type": "string",
+      "description": "Choose the report style.",
+      "editor": "select",
+      "default": "landing_page_copy",
+      "enum": [
+        "landing_page_copy",
+        "ai_seo_geo",
+        "github_repo_trust",
+        "competitor_messaging"
+      ],
+      "enumTitles": [
+        "Landing page copy fix",
+        "AI SEO / GEO mini audit",
+        "GitHub repo trust audit",
+        "Competitor messaging snapshot"
+      ]
+    },
+    "audience": {
+      "title": "Audience",
+      "type": "string",
+      "description": "Who the page or repo is trying to reach.",
+      "editor": "textfield",
+      "prefill": "indie SaaS buyers"
+    },
+    "competitorUrls": {
+      "title": "Competitor URLs",
+      "type": "array",
+      "description": "Optional public competitor URLs for comparison.",
+      "editor": "stringList",
+      "default": []
+    },
+    "notes": {
+      "title": "Notes",
+      "type": "string",
+      "description": "Optional public notes. Do not include secrets, credentials, customer data, private prompts, or regulated data.",
+      "editor": "textarea",
+      "default": ""
+    },
+    "maxChars": {
+      "title": "Maximum extracted characters",
+      "type": "integer",
+      "description": "Caps page text sent into the report engine.",
+      "editor": "number",
+      "default": 12000,
+      "minimum": 2000,
+      "maximum": 24000
+    }
+  },
+  "required": ["targetUrl", "auditType"]
+}

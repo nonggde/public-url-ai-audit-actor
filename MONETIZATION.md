@@ -1,0 +1,47 @@
+# Monetization Notes
+
+## First Version
+
+Use the Actor as a portfolio asset and manual service engine first.
+
+Offer:
+
+```text
+Public URL AI Audit Report
+USD 19-49 depending on scope
+```
+
+## Apify Store Version
+
+After quality testing, convert to a paid Actor:
+
+- free dry-run or small preview if Apify pricing supports it safely;
+- paid report generation through pay-per-event;
+- cap extracted text and model output;
+- log only metadata, not private inputs.
+
+## Buyer Segments
+
+- indie SaaS founders
+- Product Hunt launch teams
+- GitHub tool builders
+- Chrome extension makers
+- AI app makers
+- agencies that need quick public-page audits
+
+## Upsells
+
+- LLM Cost Leak Audit
+- competitor messaging snapshot
+- rewrite pack
+- GitHub README trust cleanup
+- implementation checklist
+
+## What Not To Sell
+
+- raw model API resale
+- guaranteed SEO ranking
+- guaranteed security review
+- private account scraping
+- customer data processing
+- credential/account/verification/funds work

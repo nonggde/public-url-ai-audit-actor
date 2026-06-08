@@ -1,0 +1,13 @@
+{
+  "actorSpecification": 1,
+  "name": "public-url-ai-audit-report",
+  "title": "Public URL AI Audit Report",
+  "description": "Generate a concise AI-assisted report for a public landing page, GitHub repo, AI SEO/GEO profile, or competitor messaging snapshot.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "meta": {
+    "templateId": "js-start"
+  },
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile"
+}

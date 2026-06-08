@@ -1,0 +1,8 @@
+{
+  "targetUrl": "https://example.com",
+  "auditType": "landing_page_copy",
+  "audience": "indie SaaS buyers",
+  "competitorUrls": [],
+  "notes": "Dry-run demo. Public page only.",
+  "maxChars": 12000
+}
