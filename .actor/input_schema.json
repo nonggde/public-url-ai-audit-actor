@@ -1,5 +1,5 @@
 {
-  "title": "Public URL AI Audit Report",
+  "title": "AI Search Visibility / GEO Audit Report",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
@@ -15,16 +15,18 @@
       "type": "string",
       "description": "Choose the report style.",
       "editor": "select",
-      "default": "landing_page_copy",
+      "default": "ai_search_visibility",
       "enum": [
+        "ai_search_visibility",
         "landing_page_copy",
         "ai_seo_geo",
         "github_repo_trust",
         "competitor_messaging"
       ],
       "enumTitles": [
+        "AI search visibility / GEO readiness audit",
         "Landing page copy fix",
-        "AI SEO / GEO mini audit",
+        "AI search visibility / GEO readiness audit (legacy)",
         "GitHub repo trust audit",
         "Competitor messaging snapshot"
       ]

@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Apify Actor that turns public URLs or GitHub repos into AI-assisted audit reports.",
+  "description": "Apify Actor that turns public URLs into AI search visibility, GEO readiness, landing page, and trust audit reports.",
   "scripts": {
     "start": "node src/main.mjs",
-    "check": "node --check src/main.mjs && node --check src/local-demo.mjs",
+    "check": "node --check src/main.mjs && node --check src/report-engine.mjs && node --check src/local-demo.mjs",
     "demo": "DRY_RUN=true node src/main.mjs",
     "demo:win": "powershell -ExecutionPolicy Bypass -Command \"$env:DRY_RUN='true'; node src/main.mjs\"",
     "local-demo": "node src/local-demo.mjs"

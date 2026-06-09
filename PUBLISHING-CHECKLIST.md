@@ -5,14 +5,13 @@ Current local status:
 - Actor code exists and passes syntax checks.
 - Local dry-run works through `npm run local-demo`.
 - Git repo initialized.
-- Apify private Actor build and dry-run have succeeded.
 
 ## What This Product Does
 
 The Actor accepts a public URL or public GitHub repo and generates a Markdown/JSON report:
 
+- AI search visibility / GEO readiness audit;
 - landing page copy fix;
-- AI SEO / GEO mini audit;
 - GitHub repo trust audit;
 - competitor messaging snapshot.
 
@@ -26,11 +25,10 @@ The user should create/log in to Apify and provide only safe public/account cont
 
 ## First Apify Steps
 
-1. Create or log in to Apify.
-2. Install/use Apify CLI if needed.
-3. Push this actor directory to Apify.
-4. Run private test with `DRY_RUN=true`.
-5. Add model secrets only inside Apify environment:
+1. Push this actor directory to Apify.
+2. Keep `DRY_RUN=true`.
+3. Run one private dry-run test.
+4. Add model secrets only inside Apify environment:
 
 ```text
 DRY_RUN=false
@@ -40,9 +38,16 @@ DEFAULT_MODEL=gpt-5.4-mini
 MAX_OUTPUT_TOKENS=1200
 ```
 
-6. Run one model-backed test on a harmless public URL.
-7. Review quality and cost.
-8. Only then consider Apify Store listing and pay-per-event monetization.
+5. Run one model-backed test on a harmless public URL.
+6. Review quality and cost.
+7. Configure the custom pay-per-event:
+
+```text
+ai-audit-report-generated
+```
+
+8. Enable `ENABLE_PPE_CHARGE=true` only after the event is configured.
+9. Only then consider Apify Store listing and pay-per-event monetization.
 
 ## Local Verification
 
@@ -65,7 +70,7 @@ Create or update a public portfolio repository only after the public-facing docs
 
 ```powershell
 cd path\to\public-url-ai-audit-actor
-& 'C:\Program Files\GitHub CLI\gh.exe' repo create public-url-ai-audit-actor --public --source . --remote origin --push
+gh repo create public-url-ai-audit-actor --public --source . --remote origin --push
 ```
 
 ## Monetization Guardrails

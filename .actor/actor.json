@@ -1,8 +1,8 @@
 {
   "actorSpecification": 1,
   "name": "public-url-ai-audit-report",
-  "title": "Public URL AI Audit Report",
-  "description": "Generate a concise AI-assisted report for a public landing page, GitHub repo, AI SEO/GEO profile, or competitor messaging snapshot.",
+  "title": "AI Search Visibility / GEO Audit Report",
+  "description": "Generate an AI search visibility, GEO readiness, landing page, GitHub trust, or competitor messaging report from public URLs.",
   "readme": "../README.md",
   "categories": ["AI", "SEO_TOOLS", "MARKETING"],
   "version": "0.1",

@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 
 const AUDIT_TYPES = new Set([
+  "ai_search_visibility",
   "landing_page_copy",
   "ai_seo_geo",
   "github_repo_trust",
@@ -17,7 +18,7 @@ const SECRET_PATTERNS = [
 export function defaultInput() {
   return {
     targetUrl: "https://example.com",
-    auditType: "landing_page_copy",
+    auditType: "ai_search_visibility",
     audience: "indie SaaS buyers",
     competitorUrls: [],
     notes: "",
@@ -76,8 +77,9 @@ function truncate(text, maxChars) {
 
 function titleFor(type) {
   return {
+    ai_search_visibility: "AI Search Visibility / GEO Readiness Audit",
     landing_page_copy: "Landing Page Copy Fix",
-    ai_seo_geo: "AI SEO / GEO Mini Audit",
+    ai_seo_geo: "AI Search Visibility / GEO Readiness Audit",
     github_repo_trust: "GitHub Repo Trust Audit",
     competitor_messaging: "Competitor Messaging Snapshot"
   }[type] || "Public URL AI Audit";
@@ -126,6 +128,7 @@ function githubReadmeUrl(parsed) {
 
 function buildPrompt({ input, primaryText, competitorTexts }) {
   const title = titleFor(input.auditType);
+  const isAiSearch = input.auditType === "ai_search_visibility" || input.auditType === "ai_seo_geo";
   const competitorBlock = competitorTexts.length
     ? `\nCompetitor context:\n${competitorTexts.map((item, index) => `Competitor ${index + 1}: ${item.url}\n${item.text}`).join("\n\n")}`
     : "";
@@ -137,6 +140,8 @@ function buildPrompt({ input, primaryText, competitorTexts }) {
     "- Use only the supplied public text and clearly mark assumptions.",
     "- Do not invent metrics, users, pricing, funding, customers, or technical claims.",
     "- Prioritize practical fixes over generic advice.",
+    isAiSearch ? "- Evaluate whether an AI answer engine can understand, summarize, and cite the entity, offer, audience, proof, and pages." : "",
+    isAiSearch ? "- Cover entity clarity, topical authority, content structure, schema/crawlability hints, answer-ready copy, proof signals, and citation risk." : "",
     "- Include limitations.",
     "- Do not request account access, secrets, private data, or credentials.",
     "",
@@ -150,12 +155,13 @@ function buildPrompt({ input, primaryText, competitorTexts }) {
     "",
     "Return Markdown with these sections:",
     "1. Summary",
-    "2. What Works",
-    "3. Main Gaps",
-    "4. Prioritized Fixes",
-    "5. Example Copy Or Messaging",
-    "6. Risks And Assumptions",
-    "7. Next Actions"
+    isAiSearch ? "2. AI Search Readiness Score" : "2. What Works",
+    isAiSearch ? "3. Entity And Topic Clarity" : "3. Main Gaps",
+    isAiSearch ? "4. Citation And Answer-Engine Gaps" : "4. Prioritized Fixes",
+    isAiSearch ? "5. Prioritized Fixes" : "5. Example Copy Or Messaging",
+    isAiSearch ? "6. Example Answer-Ready Copy" : "6. Risks And Assumptions",
+    isAiSearch ? "7. Risks And Assumptions" : "7. Next Actions",
+    isAiSearch ? "8. Next Actions" : ""
   ].join("\n");
 }
 
@@ -182,7 +188,7 @@ function dryRunReport({ input, primaryText, competitorTexts }) {
     "",
     isGithub
       ? "- A repo trust audit should check README clarity, install steps, examples, maintenance signals, issue guidance, and security/contact expectations."
-      : "- A page audit should check headline clarity, buyer promise, proof, call to action, and whether an AI answer engine can understand the product.",
+      : "- A page audit should check headline clarity, buyer promise, proof, call to action, entity clarity, and whether an AI answer engine can understand the product.",
     "- Replace this dry-run section with model-backed findings after payment or approved testing.",
     "",
     "## Prioritized Fixes",
