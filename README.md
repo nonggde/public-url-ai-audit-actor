@@ -6,6 +6,17 @@ This Apify Actor turns one public URL or public GitHub repository into a concise
 
 It can also generate landing page copy fixes, GitHub repo trust audits, and competitor messaging snapshots.
 
+## Paid Delivery
+
+Need a reviewed report instead of running the Actor yourself?
+
+- AI Search Visibility / GEO Audit: USD 19+ after scope confirmation.
+- Product page: https://nonggde.github.io/city-in-the-sky-services/ai-search-visibility.html
+- Manual order guide: https://nonggde.github.io/city-in-the-sky-services/order.html
+- Related recurring competitor brief: https://ko-fi.com/a13553776411gmailcom/tiers
+
+Public URLs and public repositories only. Do not send logins, private dashboards, credentials, customer data, API keys, payment data, wallet secrets, KYC material, or regulated data.
+
 ## Why This Can Earn
 
 Many builders now ask whether AI search engines can understand and cite their product. Most do not need a large SEO subscription; they need a fast outside read with practical fixes. This Actor accepts public URLs only, produces a Markdown report, and can be sold as a manual service or later as an Apify pay-per-event report generator.
